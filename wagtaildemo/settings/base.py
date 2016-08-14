@@ -5,6 +5,11 @@ import os
 PROJECT_ROOT = os.path.join(os.path.dirname(__file__), '..', '..')
 BASE_DIR = PROJECT_ROOT
 
+MYSQL_USERNAME = os.environ.get('MYSQL_USERNAME')
+MYSQL_PASSWORD = os.environ.get('MYSQL_PASSWORD')
+MYSQL_IPADDRESS = os.environ.get('MYSQL_IPADDRESS')
+MYSQL_PORT = os.environ.get('MYSQL_PORT')
+
 DEBUG = True
 
 ADMINS = (
@@ -19,10 +24,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'wagtaildemo',
-        'USER': 'os.environ.get('MYSQL_USERNAME')'
-        'PASSWORD': 'os.environ.get('MYSQL_PASSWORD')',
-        'HOST': 'os.environ.get('MYSQL_IPADDRESS')',
-        'PORT': 'os.environ.get('MYSQL_PORT')',
+        'USER': MYSQL_USERNAME,
+        'PASSWORD': MYSQL_PASSWORD,
+        'HOST': MYSQL_IPADDRESS,
+        'PORT': MYSQL_PORT,
     }
 }
 
