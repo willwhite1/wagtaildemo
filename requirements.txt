@@ -1,5 +1,4 @@
 Django>=1.9,<1.10
-psycopg2==2.6
 django-compressor>=1.4
 django-modelcluster>=0.6
 wagtail>=1.5,<1.6
