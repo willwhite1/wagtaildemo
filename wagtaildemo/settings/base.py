@@ -17,8 +17,12 @@ EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'wagtaildemo',
+        'USER': '${MYSQL_USERNAME}'
+        'PASSWORD': '${MYSQL_PASSWORD}',
+        'HOST': '${MYSQL_IPADDRESS}',
+        'PORT': '${MYSQL_PORT}',
     }
 }
 
