@@ -19,10 +19,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'wagtaildemo',
-        'USER': '${MYSQL_USERNAME}'
-        'PASSWORD': '${MYSQL_PASSWORD}',
-        'HOST': '${MYSQL_IPADDRESS}',
-        'PORT': '${MYSQL_PORT}',
+        'USER': '$ENV{"MYSQL_USERNAME"}'
+        'PASSWORD': '$ENV{"MYSQL_PASSWORD"}',
+        'HOST': '$ENV{"MYSQL_IPADDRESS"}',
+        'PORT': '$ENV{"MYSQL_PORT"}',
     }
 }
 
